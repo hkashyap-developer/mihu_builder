@@ -13,6 +13,11 @@ import HeadSubHdContAndImg from '@/components/customComponents/HeadSubHdContAndI
 import MainSetterSection from "@/components/customComponents/MainSetterSection/MainSetterSection";
 
 export default function Home() {
+
+
+
+
+  
   return (
     <div className="">
     <Header/>
