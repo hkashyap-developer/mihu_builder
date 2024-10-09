@@ -5,18 +5,41 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import Output from './template-01.png'
 import { Button } from '@/components/ui/button'
 
+import { useRef } from 'react';
+
+import { toPng } from 'html-to-image';
+
 const PrimaryOutput = () => {
+
+  const elementRef = useRef(null);
+
+
+  const htmlToImageConvert = () => {
+    toPng(elementRef.current, { cacheBust: false })
+      .then((dataUrl) => {
+        const link = document.createElement("a");
+        link.download = "my-image-name.png";
+        link.href = dataUrl;
+        link.click();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+
+
   return (
-    <div className="flex-1 flex flex-col gap-4 bg-slate-100 p-8 rounded-xl">
+    <div  className="flex-1 flex flex-col gap-4 bg-slate-100 p-8 rounded-xl">
 
 
 
 
-<AspectRatio ratio={1 / 1}>
+<AspectRatio ref={elementRef} ratio={1 / 1}>
     <Image src={Output} alt="Image" className="rounded-md  w-full min-w-full" width="1920" height="1920" />
 
 
-    <div className="absolute flex flex-col gap-4 bottom-4 left-4 w-full">
+    <div className="absolute flex flex-col gap-4 bottom-6 left-4 w-full">
 
 
 
@@ -30,8 +53,8 @@ const PrimaryOutput = () => {
 
 
 
-        <p className="text-center text-white text-3xl font-InknutAntiqua-SemiBold">Himanshu kashyap</p>
-        <p className="text-center text-white text-2xl font-InknutAntiqua-SemiBold">test</p>
+        <p className="text-center text-white text-3xl font-InknutAntiqua-SemiBold">Himanshu K kashyap</p>
+        <p className="text-center text-white text-xl font-InknutAntiqua-SemiBold">Web Developer, RGP</p>
     </div>
 
 
@@ -40,8 +63,8 @@ const PrimaryOutput = () => {
 
     <div className="flex justify-between">
 
-        <div className="flex flex-1 text-center">
-            <Button variant="outline" className="text-right">Download</Button>
+        <div className="flex flex-1 text-center justify-start">
+            <Button className="p-6 bg-green-800 text-white" onClick={htmlToImageConvert}>Download</Button>
         </div>
 
 

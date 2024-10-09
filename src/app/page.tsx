@@ -1,3 +1,5 @@
+"use client"
+
 /*
 
     <HeadSubHdContAndImg/>
@@ -12,11 +14,16 @@ import Image from "next/image";
 import HeadSubHdContAndImg from '@/components/customComponents/HeadSubHdContAndImg/HeadSubHdContAndImg'
 import MainSetterSection from "@/components/customComponents/MainSetterSection/MainSetterSection";
 
+import { useState } from 'react';
+
+
+
+
 export default function Home() {
 
 
 
-
+  const [userImage, setUserImage] = useState('Taylor');
   
   return (
     <div className="">
@@ -25,9 +32,7 @@ export default function Home() {
     <div className="mt-[72px]">
 
 
-    <MainSetterSection/>
-
-
+    <MainSetterSection userImageVar={userImage} setUserImageVar={setUserImage}/>
 
 
     </div>
