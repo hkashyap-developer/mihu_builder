@@ -23,14 +23,16 @@ const MainSetterSection = () => {
 
 
   return (
-    <div className="max-w-[1400px] mx-auto px-2 sm:px-6 py-2 flex align-middle justify-center gap-8">
-        <div className="flex flex-1 align-middle justify-center">
+    <div className="max-w-[1400px] mx-auto px-2 sm:px-6 py-6 flex align-middle justify-center gap-8">
+        <div className="flex flex-row flex-1">
+
+
 
             <AllInputs/>
 
         </div>
 
-        <div className="flex-1">
+        <div className="flex flex-1">
 
             <PrimaryOutput/>
 
