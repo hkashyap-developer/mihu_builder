@@ -23,8 +23,21 @@ export default function Home() {
 
 
 
-  const [userImage, setUserImage] = useState('Taylor');
-  
+  const [userImage, setUserImage] = useState('');
+  const [name, setName] = useState("Himanshu Kashyap");
+  const [designation, setDesignation] = useState("Yuva Neta");
+
+
+
+  function settingName(nameVar:any) {
+    setName(nameVar);
+  }
+  function settingDesg(desgVar:any) {
+    setName(desgVar);
+  }
+
+
+
   return (
     <div className="">
     <Header/>
@@ -32,7 +45,14 @@ export default function Home() {
     <div className="mt-[72px]">
 
 
-    <MainSetterSection userImageVar={userImage} setUserImageVar={setUserImage}/>
+    <MainSetterSection 
+    userImageVar={userImage} 
+    setUserImageVar={setUserImage}
+    nameVar={name}
+    setNameVar={settingName}
+    designationVar={designation}
+    setDesignationVar={settingDesg}
+    />
 
 
     </div>

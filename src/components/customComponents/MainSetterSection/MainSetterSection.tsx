@@ -15,11 +15,9 @@ import EditIcon from "../assets/edit.svg";
 import UploadingAnimation from "../assets/uploading.gif";
 
 
-const MainSetterSection = () => {
+const MainSetterSection = (props:any) => {
 
-    const [name, setName] = useState("");
-    const [designation, setDesignation] = useState("");
-    const [image, setImage] = useState("");
+
 
 
   return (
@@ -28,13 +26,31 @@ const MainSetterSection = () => {
 
 
 
-            <AllInputs/>
+            <AllInputs
+            
+            userImageVar={props.userImageVar} 
+            setUserImageVar={props.setUserImageVar}
+            nameVar={props.nameVar}
+            setNameVar={props.setNameVar}
+            designationVar={props.designationVar}
+            setDesignationVar={props.setDesignationVar}
+            
+            />
 
         </div>
 
         <div className="flex flex-1">
 
-            <PrimaryOutput/>
+            <PrimaryOutput
+            
+            userImageVar={props.userImageVar} 
+            setUserImageVar={props.setUserImageVar}
+            nameVar={props.nameVar}
+            setNameVar={props.setNameVar}
+            designationVar={props.designationVar}
+            setDesignationVar={props.setDesignationVar}
+            
+            />
 
         </div>
 

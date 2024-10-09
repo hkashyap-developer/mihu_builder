@@ -72,16 +72,8 @@ export default function MainNavigation() {
     <NavigationMenu>
       <NavigationMenuList className="flex gap-0 xl:gap-8 flex-row">
        
-      <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <p className="text-base">
-                Home
-              </p>
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
 
+        {/*
 
         <NavigationMenuItem>
           <Link href="/about" legacyBehavior passHref>
@@ -92,6 +84,10 @@ export default function MainNavigation() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
+
+
+
+
 
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-base">Services</NavigationMenuTrigger>
@@ -110,6 +106,9 @@ export default function MainNavigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
+
+
+
         <NavigationMenuItem>
           <Link href="/contact" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -120,8 +119,14 @@ export default function MainNavigation() {
           </Link>
         </NavigationMenuItem>
 
+     */}
+
+
       </NavigationMenuList>
     </NavigationMenu>
+
+
+   
 
     </>
   )

@@ -9,18 +9,19 @@ import { useRef } from 'react';
 
 import { toPng } from 'html-to-image';
 
-const PrimaryOutput = () => {
+const PrimaryOutput = (props:any) => {
 
   const elementRef = useRef(null);
 
 
   const htmlToImageConvert = () => {
-    toPng(elementRef.current, { cacheBust: false })
+    toPng(elementRef.current, { cacheBust: true })
       .then((dataUrl) => {
-        const link = document.createElement("a");
-        link.download = "my-image-name.png";
+        let link = document.createElement("a");
+        link.download = "my-poster.png";
         link.href = dataUrl;
         link.click();
+        window.location.reload();
       })
       .catch((err) => {
         console.log(err);
@@ -30,7 +31,7 @@ const PrimaryOutput = () => {
 
 
   return (
-    <div  className="flex-1 flex flex-col gap-4 bg-slate-100 p-8 rounded-xl">
+    <div className="flex-1 flex flex-col gap-4 bg-slate-100 p-8 rounded-xl">
 
 
 
@@ -53,8 +54,8 @@ const PrimaryOutput = () => {
 
 
 
-        <p className="text-center text-white text-3xl font-InknutAntiqua-SemiBold">Himanshu K kashyap</p>
-        <p className="text-center text-white text-xl font-InknutAntiqua-SemiBold">Web Developer, RGP</p>
+        <p className="text-center text-white text-3xl font-InknutAntiqua-SemiBold">{props.nameVar}</p>
+        <p className="text-center text-white text-xl font-InknutAntiqua-SemiBold">{props.designationVar}</p>
     </div>
 
 
