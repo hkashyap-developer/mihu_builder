@@ -52,7 +52,7 @@ const Header = async() => {
       <Button className="hidden  my-auto">Test</Button>
       </div>
       <div className="flex align-middle justify-center">
-      <Button className="flex my-auto text-sm sm:text-lg">Sign In</Button>
+      <Button className="flex my-auto text-sm sm:text-lg">Contact</Button>
       </div>
 
 
