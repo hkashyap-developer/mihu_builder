@@ -6,6 +6,8 @@ import { Label } from "@/components/ui/label"
 import { Button } from '@/components/ui/button'
 import Image from "next/image";
 import {useForm} from 'react-hook-form'
+import { useEffect } from 'react';
+
 
 type FormValues = {
   image: string
@@ -20,6 +22,52 @@ const AllInputs = (props:any) => {
   const { register, control, handleSubmit } = form;
 
 
+
+
+
+
+
+  useEffect(() => {
+
+
+
+
+
+
+
+    return () => {
+
+
+
+
+
+      const fileEl = document.getElementById('userPic');
+
+
+      console.log(fileEl); 
+  
+      fileEl.addEventListener('change', ()=> {
+    
+        const fr = new FileReader();
+        fr.readAsDataURL(fileEl.files[0]);
+    
+        fr.addEventListener('load', () => {
+          props.setUserImageVar(fr.result);
+          console.log(fr.result);
+        })
+    
+      }); 
+
+
+
+
+
+    };
+  }, []);
+
+
+
+
   const onSubmit = (data:FormValues) => {
 
     /* Showing form data in console */
@@ -29,8 +77,26 @@ const AllInputs = (props:any) => {
     
     console.log('Form Submitted', data);
 
-    props.setNameVar(data.name); 
+    /* Dealing with picture */
+
+
+
+
+
+
+
+    /* Dealing with names */ 
+    
+    props.setNameVar(data.name);
+    localStorage.setItem("Name", data.name);
+   
+    /* Dealing with designation */     
+
+    localStorage.setItem("Designation", data.desig);
     props.setDesignationVar(data.desig); 
+
+
+
 
   }
 
@@ -54,16 +120,16 @@ const AllInputs = (props:any) => {
       <Label htmlFor="picture" className="flex flex-col gap-4 font-bold cursor-pointer max-w-min rounded-full mx-auto">
 
       <Image
-      src="/user.jpg"
+      src={props.userImageVar}
       width={200}
       height={200}
       alt="Picture of the author"
       className="max-w-[200px] rounded-full"
     />
-    <Button  variant="outline" className="max-w-min mx-auto min-w-[160px]">Upload Image</Button>
+   
 
       </Label>
-      <Input id="picture" type="file" className="hidden cursor-pointer" {...register("image")}/>
+      <Input id="userPic" type="file" className=" cursor-pointer" {...register("image")}/>
     </div>
 
     <div className="grid w-full max-w-sm items-center gap-1.5">

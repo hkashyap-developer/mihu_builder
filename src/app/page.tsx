@@ -15,6 +15,7 @@ import MainSetterSection from "@/components/customComponents/MainSetterSection/M
 
 
 import MainCanvas from "@/components/customComponents/MainCanvas/MainCanvas";
+import HeroBanner from "@/components/customComponents/HeroBanner/HeroBanner";
 
 
 
@@ -34,6 +35,7 @@ export default function Home() {
     <div className="mt-[72px]">
 
 
+<HeroBanner/>
 
 
     <MainCanvas/>

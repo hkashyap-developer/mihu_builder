@@ -21,7 +21,9 @@ const PrimaryOutput = (props:any) => {
         link.download = "my-poster.png";
         link.href = dataUrl;
         link.click();
+        /*
         window.location.reload();
+        */
       })
       .catch((err) => {
         console.log(err);
@@ -45,11 +47,11 @@ const PrimaryOutput = (props:any) => {
 
 
         <Image
-          src="/user.jpg"
+          src={props.userImageVar}
           width={100}
           height={100}
           alt="Picture of the author"
-          className="max-w-[200px] rounded-full bg-white mx-auto"
+          className="max-w-[200px] rounded-full  mx-auto"
         />
 
 

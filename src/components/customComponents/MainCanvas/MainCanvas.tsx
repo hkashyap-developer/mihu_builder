@@ -9,9 +9,9 @@ const MainCanvas = () => {
 
 
 
-    const [userImage, setUserImage] = useState('');
-    const [name, setName] = useState("Himanshu Kashyap p");
-    const [designation, setDesignation] = useState("Yuva Neta");
+    const [userImage, setUserImage] = useState('/user.jpg');
+    const [name, setName] = useState("Himanshu Kashyap");
+    const [designation, setDesignation] = useState("CTO, Media-X-Infinity");
   
   
 
