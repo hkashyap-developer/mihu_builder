@@ -29,7 +29,8 @@ const AllInputs = (props:any) => {
     
     console.log('Form Submitted', data);
 
-    props.setNameVar(); 
+    props.setNameVar(data.name); 
+    props.setDesignationVar(data.desig); 
 
   }
 
