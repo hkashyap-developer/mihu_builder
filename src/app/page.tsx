@@ -1,4 +1,3 @@
-"use client"
 
 /*
 
@@ -14,7 +13,8 @@ import Image from "next/image";
 import HeadSubHdContAndImg from '@/components/customComponents/HeadSubHdContAndImg/HeadSubHdContAndImg'
 import MainSetterSection from "@/components/customComponents/MainSetterSection/MainSetterSection";
 
-import { useState } from 'react';
+
+import MainCanvas from "@/components/customComponents/MainCanvas/MainCanvas";
 
 
 
@@ -23,18 +23,7 @@ export default function Home() {
 
 
 
-  const [userImage, setUserImage] = useState('');
-  const [name, setName] = useState("Himanshu Kashyap");
-  const [designation, setDesignation] = useState("Yuva Neta");
 
-
-
-  function settingName(nameVar:any) {
-    setName(nameVar);
-  }
-  function settingDesg(desgVar:any) {
-    setName(desgVar);
-  }
 
 
 
@@ -45,6 +34,12 @@ export default function Home() {
     <div className="mt-[72px]">
 
 
+
+
+    <MainCanvas/>
+
+
+{/*
     <MainSetterSection 
     userImageVar={userImage} 
     setUserImageVar={setUserImage}
@@ -53,7 +48,7 @@ export default function Home() {
     designationVar={designation}
     setDesignationVar={settingDesg}
     />
-
+*/}
 
     </div>
 

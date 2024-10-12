@@ -18,8 +18,6 @@ import UploadingAnimation from "../assets/uploading.gif";
 const MainSetterSection = (props:any) => {
 
 
-
-
   return (
     <div className="max-w-[1400px] mx-auto px-2 sm:px-6 py-6 flex align-middle justify-center gap-8">
         <div className="flex flex-row flex-1">

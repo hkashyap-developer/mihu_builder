@@ -8,9 +8,9 @@ import Image from "next/image";
 import {useForm} from 'react-hook-form'
 
 type FormValues = {
-  MethodOfComnctn: string
-  PreferdAcmdn: string
-  destinationIndia: string
+  image: string
+  name: string
+  desig: string
 }
 
 
@@ -29,7 +29,7 @@ const AllInputs = (props:any) => {
     
     console.log('Form Submitted', data);
 
-
+    props.setNameVar(); 
 
   }
 
