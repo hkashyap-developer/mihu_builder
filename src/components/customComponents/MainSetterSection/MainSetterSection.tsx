@@ -19,8 +19,8 @@ const MainSetterSection = (props:any) => {
 
 
   return (
-    <div className="max-w-[1400px] mx-auto px-2 sm:px-6 py-6 flex align-middle justify-center gap-8">
-        <div className="flex flex-row flex-1">
+    <div className="w-full mx-auto px-2 sm:px-0 py-6 flex align-middle justify-center gap-8 ">
+        <div className="max-w-[400px] flex flex-row flex-1 overflow-y-visible">
 
 
 
@@ -37,7 +37,7 @@ const MainSetterSection = (props:any) => {
 
         </div>
 
-        <div className="flex flex-1">
+        <div className="flex flex-1 justify-center">
 
             <PrimaryOutput
             

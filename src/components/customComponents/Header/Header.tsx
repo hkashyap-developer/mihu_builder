@@ -26,7 +26,7 @@ const Header = async() => {
 
 
   return (
-    <div className="fixed border-t-[0px] border-slate-400 top-0 z-50 w-full">
+    <div className="fixed border-t-[0px] border-slate-400 top-0 z-50 w-full bg-slate-50">
     <div className="flex flex-row align-middle justify-between px-2 sm:px-6 py-2 min-h-[72px]">
  
     <Link href="/" className="xl:min-w-[200px] flex flex-col align-start justify-center">

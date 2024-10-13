@@ -33,7 +33,7 @@ const PrimaryOutput = (props:any) => {
 
 
   return (
-    <div className="flex-1 flex flex-col gap-4 bg-slate-100 p-8 rounded-xl">
+    <div className="max-w-[800px] flex-1 flex flex-col gap-4 bg-slate-50 p-8 rounded-xl">
 
 
 
@@ -67,7 +67,7 @@ const PrimaryOutput = (props:any) => {
     <div className="flex justify-between">
 
         <div className="flex flex-1 text-center justify-start">
-            <Button className="p-6 bg-green-800 text-white" onClick={htmlToImageConvert}>Download</Button>
+            <Button className="text-xl p-6 bg-green-800 text-white w-full" onClick={htmlToImageConvert}>Download</Button>
         </div>
 
 
