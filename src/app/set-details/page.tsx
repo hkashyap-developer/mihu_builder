@@ -1,7 +1,10 @@
 import HeroBanner from '@/components/customComponents/HeroBanner/HeroBanner2'
+import HorzNavBar from '@/components/customComponents/HorzNavBar/HorzNavBar'
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Button } from '@/components/ui/button'
 
 const page = () => {
   return (
@@ -9,43 +12,90 @@ const page = () => {
 
         <HeroBanner/>
 
-
-    
-        <div className="flex flex-row gap-4">
+        <HorzNavBar/>
 
 
-            <Link href="/">
-            <div className="cursor-pointer flex flex-col align-middle justify-center max-w-min gap-2">
-                <div className="flex flex-row bg-slate-100 w-[60px] h-[60px] align-middle justify-center p-2 pl-[18px] rounded-full">
-                    <Image src="/back.svg" width="36" height="36" alt="back"/>
-                </div>
-                <p className="text-center text-slate-600">Back</p>
-            </div>
-            </Link>
+
+
+        <div className="flex flex-col gap-6 w-full max-w-[800px] bg-slate-50 mx-auto p-16 rounded-2xl">
+
+
+
+        <h1 className="text-5xl font-bold mb-8">Set Details</h1>
+
+
+
+
+    <div className="flex flex-row gap-20  rounded-2xl p-8 bg-white">
+
+
+<div className="flex flex-col gap-6 justify-center max-w-[220px]">
+        <Image
+      src="/user.jpg"
+      width={200}
+      height={200}
+      alt="Picture of the author"
+      className="max-w-[600px] rounded-full mx-auto"
+    />
+      <Input id="userPic" type="file" className=" cursor-pointer" />
+</div>
+
+
+    <div className="flex flex-col gap-6">
+
+
+    <div className="rounded-2xl flex flex-col gap-6">
+    <div className="grid gap-4 w-full max-w-sm items-center gap-1.5">
+      <Label htmlFor="name" className="font-bold">Your Name / Company Name</Label>
+      <Input 
+      type="text" 
+      id="name"      
+      placeholder="Himanshu Kashyap"
+      className="text-xl py-6 w-full  border-b-8"
+      />
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div className=" rounded-2xl flex flex-col gap-6">
+    <div className="grid gap-4 w-full max-w-sm items-center gap-1.5">
+      <Label htmlFor="name" className="font-bold">Designation / Subheading</Label>
+      <Input 
+      type="text" 
+      id="name"     
+      placeholder="Himanshu Kashyap"
+      className="text-xl py-6 w-full border-b-8"
+      />
+    </div>
+    </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <Button type="submit" className="text-2xl p-6 max-w-min min-w-[160px]">Update</Button>
 
         </div>
-
-
-        <div className="w-full max-w-[800px] bg-slate-50 mx-auto p-8 rounded-2xl">
-
-
-
-        <h1 className="text-5xl font-bold">Set Details</h1>
-
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-
 
 
 

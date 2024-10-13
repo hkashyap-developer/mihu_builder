@@ -52,7 +52,10 @@ const Header = async() => {
       <Button className="hidden  my-auto">Test</Button>
       </div>
       <div className="flex align-middle justify-center">
-      <Button className="flex my-auto text-sm sm:text-lg">Contact</Button>
+
+      <Link href="/todays-posts">
+      <Button className="flex my-auto text-sm sm:text-lg">Today's Posts</Button>
+      </Link>
       </div>
 
 
