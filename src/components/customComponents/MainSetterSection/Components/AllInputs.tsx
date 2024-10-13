@@ -111,7 +111,7 @@ const AllInputs = (props:any) => {
     <div className="flex flex-row flex-1  align-middle justify-center">
 
 
-<div className="flex align-middle justify-center gap-6 flex-col border-2 w-full max-w-[400px] max-h-min p-8 rounded-xl">
+<div className="flex align-middle justify-center gap-6 flex-col border-2 w-full max-w-[400px] max-h-min p-6 rounded-xl">
 
 
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
@@ -119,7 +119,7 @@ const AllInputs = (props:any) => {
     <div className="grid w-full max-w-sm items-center gap-1.5">
 
 
-      <div className="bg-slate-50 p-8 rounded-2xl">
+      <div className="bg-slate-50 p-8 rounded-2xl flex flex-col gap-6">
       <Label htmlFor="picture" className="flex flex-col gap-4 font-bold cursor-pointer max-w-min rounded-full mx-auto">
 
       <Image
@@ -127,17 +127,25 @@ const AllInputs = (props:any) => {
       width={200}
       height={200}
       alt="Picture of the author"
-      className="max-w-[600px] rounded-2xl"
+      className="max-w-[600px] rounded-full"
     />
    
 
       </Label>
-      </div>
 
 
       <Input id="userPic" type="file" className=" cursor-pointer" {...register("image")}/>
+      </div>
+
+
+
     </div>
 
+
+
+
+
+    <div className="bg-slate-50 p-8 rounded-2xl flex flex-col gap-6">
     <div className="grid w-full max-w-sm items-center gap-1.5">
       <Label htmlFor="name" className="font-bold">Your Name / Company</Label>
       <Input 
@@ -148,19 +156,27 @@ const AllInputs = (props:any) => {
       className="text-xl"
       />
     </div>
+    </div>
 
+
+
+    <div className="bg-slate-50 p-8 rounded-2xl flex flex-col gap-6">
     <div className="grid w-full max-w-sm items-center gap-1.5">
       <Label htmlFor="designation" className="font-bold">Designation / More</Label>
       
       <Input 
       type="text" 
       id="designation" 
+      value={props.designationVar} 
       placeholder={props.designationVar} 
       {...register("desig")}
-      className="text-xl"
+      className="text-xl text-black"
       />
 
     </div>
+
+    </div>
+
 
     <Button type="submit" className="max-w-min min-w-[160px] mx-auto">Update Person</Button>
 
