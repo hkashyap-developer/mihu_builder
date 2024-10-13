@@ -5,8 +5,7 @@
 
 */
 
-import Header from "@/components/customComponents/Header/Header";
-import Footer from '@/components/customComponents/Footer/Footer'
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,7 +17,7 @@ import MainSetterSection from "@/components/customComponents/MainSetterSection/M
 import MainCanvas from "@/components/customComponents/MainCanvas/MainCanvas";
 import HeroBanner from "@/components/customComponents/HeroBanner/HeroBanner";
 import { Button } from "@/components/ui/button";
-import MainSidebar from "@/components/customComponents/MainSidebar/MainSidebar";
+
 
 
 
@@ -33,56 +32,11 @@ export default function Home() {
 
   return (
     <div className="">
-    <Header/>
 
-    <div className="flex flex-column bg-slate-50">
-
-
-    <div className="mt-24 p-4 min-w-[260px]">
-      <div className="fixed top-20">
-
-        <MainSidebar/>
-
-
-      </div>
-
-
+          <HeroBanner />
+          <MainCanvas />
 
     </div>
 
-
-
-
-    <div className="mt-[72px] p-4 w-full bg-white rounded-2xl">
-
-
-
-
-<HeroBanner/>
-
-
-    <MainCanvas/>
-
-
-{/*
-    <MainSetterSection 
-    userImageVar={userImage} 
-    setUserImageVar={setUserImage}
-    nameVar={name}
-    setNameVar={settingName}
-    designationVar={designation}
-    setDesignationVar={settingDesg}
-    />
-*/}
-
-    </div>
-    </div>
-
-
-
-
-    <Footer/>
-
-    </div>
   );
 }
