@@ -19,19 +19,19 @@ import { toPng } from 'html-to-image';
 const TemplateCard = (props:any) => {
 
 
-    const elementRef = useRef(null);
+    let elementRef = useRef(null);
 
 
-    const htmlToImageConvert = () => {
+    let htmlToImageConvert = () => {
       toPng(elementRef.current, { cacheBust: true })
         .then((dataUrl) => {
           let link = document.createElement("a");
           link.download = "my-poster.png";
           link.href = dataUrl;
           link.click();
-          /*
+          
           window.location.reload();
-          */
+        
          
         })
         .catch((err) => {
