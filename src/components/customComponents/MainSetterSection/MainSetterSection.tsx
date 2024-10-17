@@ -25,7 +25,6 @@ const MainSetterSection = (props:any) => {
 
 
             <AllInputs
-            
             userImageVar={props.userImageVar} 
             setUserImageVar={props.setUserImageVar}
             nameVar={props.nameVar}

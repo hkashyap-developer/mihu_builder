@@ -20,23 +20,22 @@ const page = () => {
 
 
 
+        <h1 className="text-5xl font-bold mb-8 mt-4 p-16mx-auto w-full text-center">Today's Posts</h1>
+
+        <p className="mb-8 text-center">Click on the design to Download.</p>
 
 
+        <div className="max-w-[600px] 2xl:max-w-[1200px] grid grid-cols-1 2xl:grid-cols-2 gap-8 mx-auto">
 
-
-
-
-
-
-        <h1 className="text-5xl font-bold mb-8 mt-4 p-16mx-auto w-full">Today's Posts</h1>
-
-        <p className="mb-8">Click on the design to Download.</p>
-
-
-        <div className="grid grid-cols-4 gap-8">
- 
+        <TemplateCard tmpltUrl="/placeholder-raw.png"/> 
+        <TemplateCard tmpltUrl="/diwali.png"/> 
+        <TemplateCard tmpltUrl="/diwali-2.png"/> 
+        <TemplateCard tmpltUrl="/placeholder-5.jpg"/> 
+        <TemplateCard tmpltUrl="/placeholder-6.png"/> 
         <TemplateCard tmpltUrl="/placeholder.png"/>
         <TemplateCard tmpltUrl="/placeholder-2.png"/>
+        <TemplateCard tmpltUrl="/placeholder-3.png"/>
+        <TemplateCard tmpltUrl="/placeholder-4.png"/>
         <TemplateCard tmpltUrl="/placeholder-3.png"/>
         <TemplateCard tmpltUrl="/placeholder-4.png"/>
 

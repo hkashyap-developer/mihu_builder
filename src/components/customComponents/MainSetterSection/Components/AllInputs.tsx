@@ -23,6 +23,19 @@ const AllInputs = (props:any) => {
 
 
 
+  var image = localStorage.getItem('Image');
+  var name = localStorage.getItem('Name');
+  var designation = localStorage.getItem('Designation');
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -33,31 +46,31 @@ const AllInputs = (props:any) => {
 
 
 
+    const fileEl = document.getElementById('userPic');
+
+
+    console.log(fileEl); 
+
+    fileEl.addEventListener('change', ()=> {
+  
+      const fr = new FileReader();
+      fr.readAsDataURL(fileEl.files[0]);
+  
+      fr.addEventListener('load', () => {
+        props.setUserImageVar(fr.result);
+        console.log(fr.result);
+        localStorage.setItem("Image", fr.result);
+      })
+  
+    }); 
+
+
 
 
     return () => {
 
 
-
-
-
-      const fileEl = document.getElementById('userPic');
-
-
-      console.log(fileEl); 
-  
-      fileEl.addEventListener('change', ()=> {
-    
-        const fr = new FileReader();
-        fr.readAsDataURL(fileEl.files[0]);
-    
-        fr.addEventListener('load', () => {
-          props.setUserImageVar(fr.result);
-          console.log(fr.result);
-        })
-    
-      }); 
-
+   
 
 
 
@@ -108,22 +121,23 @@ const AllInputs = (props:any) => {
 
 
   return (
-    <div className="flex flex-row flex-1  align-middle justify-center">
+    <div className="flex flex-col flex-1">
 
 
-<div className="flex align-middle justify-center gap-6 flex-col border-2 w-full max-w-[400px] max-h-min p-6 rounded-xl">
+
+<div className="flex align-middle my-auto justify-center gap-6 flex-col border-2 w-full max-w-[400px] max-h-min p-6 rounded-xl">
 
 
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
 
-    <div className="grid w-full max-w-sm items-center gap-1.5">
+    <div className="grid w-full max-w-sm items-center gap-8">
 
 
-      <div className="bg-slate-50 p-8 rounded-2xl flex flex-col gap-6">
+      <div className=" rounded-2xl flex flex-col gap-6">
       <Label htmlFor="picture" className="flex flex-col gap-4 font-bold cursor-pointer max-w-min rounded-full mx-auto">
 
       <Image
-      src={props.userImageVar}
+      src={image}
       width={200}
       height={200}
       alt="Picture of the author"
@@ -134,7 +148,7 @@ const AllInputs = (props:any) => {
       </Label>
 
 
-      <Input id="userPic" type="file" className=" cursor-pointer" {...register("image")}/>
+      <Input id="userPic" type="file" className="flex align-middle justify-center cursor-pointer text-xl pb-10 pt-3 w-full border-b-8" {...register("image")}/>
       </div>
 
 
@@ -145,32 +159,31 @@ const AllInputs = (props:any) => {
 
 
 
-    <div className="bg-slate-50 p-8 rounded-2xl flex flex-col gap-6">
+    <div className=" rounded-2xl flex flex-col gap-6">
     <div className="grid w-full max-w-sm items-center gap-1.5">
       <Label htmlFor="name" className="font-bold">Your Name / Company</Label>
       <Input 
       type="text" 
       id="name" 
-      placeholder={props.nameVar} 
+      placeholder={name}
       {...register("name")}
-      className="text-xl"
+      className="text-xl py-6 w-full border-b-8"
       />
     </div>
     </div>
 
 
 
-    <div className="bg-slate-50 p-8 rounded-2xl flex flex-col gap-6">
+    <div className=" rounded-2xl flex flex-col gap-6">
     <div className="grid w-full max-w-sm items-center gap-1.5">
       <Label htmlFor="designation" className="font-bold">Designation / More</Label>
       
       <Input 
       type="text" 
       id="designation" 
-      value={props.designationVar} 
-      placeholder={props.designationVar} 
+      placeholder={designation}
       {...register("desig")}
-      className="text-xl text-black"
+      className="text-xl py-6 w-full border-b-8"
       />
 
     </div>
@@ -178,11 +191,12 @@ const AllInputs = (props:any) => {
     </div>
 
 
-    <Button type="submit" className="max-w-min min-w-[160px] mx-auto">Update Person</Button>
+    <Button type="submit" className="max-w-min min-w-[160px] mx-auto  text-xl font-bold p-6 bg-[#3C99FE] text-white">Update Person</Button>
 
     </form>
 
     </div>
+    👆 How It works?
 
 
     </div>

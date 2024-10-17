@@ -11,6 +11,17 @@ import { toPng } from 'html-to-image';
 
 const PrimaryOutput = (props:any) => {
 
+
+
+
+  var image = localStorage.getItem('Image');
+  var name = localStorage.getItem('Name');
+  var designation = localStorage.getItem('Designation');
+
+
+
+
+
   const elementRef = useRef(null);
 
 
@@ -47,7 +58,7 @@ const PrimaryOutput = (props:any) => {
 
 
         <Image
-          src={props.userImageVar}
+          src={image}
           width={100}
           height={100}
           alt="Picture of the author"
@@ -56,8 +67,8 @@ const PrimaryOutput = (props:any) => {
 
 
 
-        <p className="text-center text-white text-3xl font-InknutAntiqua-SemiBold">{props.nameVar}</p>
-        <p className="text-center text-white text-xl font-InknutAntiqua-SemiBold">{props.designationVar}</p>
+        <p className="text-center text-white text-3xl font-InknutAntiqua-SemiBold">{name}</p>
+        <p className="text-center text-white text-xl font-InknutAntiqua-SemiBold">{designation}</p>
     </div>
 
 
@@ -66,8 +77,9 @@ const PrimaryOutput = (props:any) => {
 
     <div className="flex justify-between">
 
-        <div className="flex flex-1 text-center justify-start">
-            <Button className="text-xl p-6 bg-green-800 text-white w-full" onClick={htmlToImageConvert}>Download</Button>
+        <div className="flex flex-1 text-center justify-start gap-4">
+            <Button className="text-xl font-bold p-6 bg-[#3C99FE] text-white" onClick={htmlToImageConvert}>Download</Button>
+            <Button className="text-xl font-bold p-6 bg-[#3C99FE] text-white" onClick={htmlToImageConvert}>More Designs</Button>
         </div>
 
 

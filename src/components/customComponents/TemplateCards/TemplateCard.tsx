@@ -19,6 +19,26 @@ import { toPng } from 'html-to-image';
 const TemplateCard = (props:any) => {
 
 
+
+
+
+  var image = localStorage.getItem('Image');
+
+    var name = localStorage.getItem('Name');
+    var designation = localStorage.getItem('Designation');
+
+
+
+
+
+
+
+
+
+
+
+
+
     let elementRef = useRef(null);
 
 
@@ -55,7 +75,7 @@ const TemplateCard = (props:any) => {
 
 
 
-    <div className="hover:shadow-xl">
+    <div className="hover:shadow-xl relative">
 
     <Image
         src={props.tmpltUrl}
@@ -64,6 +84,25 @@ const TemplateCard = (props:any) => {
         alt="Picture of the author"
         className="w-full cursor-pointer "
         />
+
+
+
+<div className="absolute bottom-6 flex flex-col  gap-2 mx-auto w-full">
+
+
+<Image
+          src={image}
+          width={100}
+          height={100}
+          alt="Picture of the author"
+          className="max-w-[200px] rounded-full  mx-auto"
+        />
+
+<p className="w-full text-center text-white text-[200%] font-InknutAntiqua-SemiBold">{name}</p>
+        <p className="text-center text-white text-xl font-InknutAntiqua-SemiBold">{designation}</p>
+    
+    
+    </div>
 
 
 
@@ -92,15 +131,15 @@ const TemplateCard = (props:any) => {
 
 
 <Image
-          src="/user.jpg"
+          src={image}
           width={100}
           height={100}
           alt="Picture of the author"
           className="max-w-[200px] rounded-full  mx-auto"
         />
 
-<p className="text-center text-white text-3xl font-InknutAntiqua-SemiBold">Himanshu Kashyap</p>
-        <p className="text-center text-white text-xl font-InknutAntiqua-SemiBold">CTO, Media-X-Infinity</p>
+<p className="text-center text-white text-3xl font-InknutAntiqua-SemiBold">{name}</p>
+        <p className="text-center text-white text-xl font-InknutAntiqua-SemiBold">{designation}</p>
     
     
     </div>

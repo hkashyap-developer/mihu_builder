@@ -53,8 +53,8 @@ const Header = async() => {
       </div>
       <div className="flex align-middle justify-center">
 
-      <Link href="/todays-posts">
-      <Button className="flex my-auto text-sm sm:text-lg">Today's Posts</Button>
+      <Link href="/todays-posts" className="my-auto">
+      <Button className="flex my-auto text-xl font-bold p-6 bg-[#3C99FE] text-white">Today's Posts</Button>
       </Link>
       </div>
 

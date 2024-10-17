@@ -8,13 +8,11 @@ const MainSidebar = () => {
   return (
     <div className="flex flex-col justify-between gap-4">
 
-        <Link href="/set-details">
+        <Link href="/">
             <Button className="text-xl font-semibold p-6 bg-[#3C99FE]">+ Create A Post</Button>
         </Link>
 
-        <Link href="/set-details">
-            <p className="text-xl">Set Details</p>
-        </Link>
+
         <Link href="/my-team" className="flex flex-row gap-2">
             <p className="text-xl text-slate-400">My Team</p><Badge variant="outline" className="rounded-full text-xsm font-thin">Coming Soon</Badge>
         </Link>
