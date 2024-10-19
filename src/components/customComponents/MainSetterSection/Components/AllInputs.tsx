@@ -24,9 +24,9 @@ const AllInputs = (props:any) => {
 
 
 
-  var image = localStorage.getItem('Image');
-  var name = localStorage.getItem('Name');
-  var designation = localStorage.getItem('Designation');
+  var image = localStorage.getItem('Image')!;
+  var name = localStorage.getItem('Name')!;
+  var designation = localStorage.getItem('Designation')!;
 
 
 
@@ -47,7 +47,7 @@ const AllInputs = (props:any) => {
 
 
 
-    const fileEl = document.getElementById('userPic');
+    const fileEl = document.getElementById('userPic')!;
 
 
     console.log(fileEl); 

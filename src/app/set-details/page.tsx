@@ -45,7 +45,7 @@ const page = () => {
 
 
     <div className="rounded-2xl flex flex-col gap-6">
-    <div className="grid gap-4 w-full max-w-sm items-center gap-1.5">
+    <div className="grid gap-4 w-full max-w-sm items-center">
       <Label htmlFor="name" className="font-bold">Your Name / Company Name</Label>
       <Input 
       type="text" 
@@ -65,7 +65,7 @@ const page = () => {
 
 
     <div className=" rounded-2xl flex flex-col gap-6">
-    <div className="grid gap-4 w-full max-w-sm items-center gap-1.5">
+    <div className="grid gap-4 w-full max-w-sm items-center">
       <Label htmlFor="name" className="font-bold">Designation / Subheading</Label>
       <Input 
       type="text" 

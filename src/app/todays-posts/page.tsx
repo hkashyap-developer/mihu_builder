@@ -35,57 +35,25 @@ const page = async() => {
   return (
     <div className="flex flex-col gap-4">
 
-
-
         <HeroBanner/>
 
         <HorzNavBar/>
-
-
-
-
-
-
-
-
-
 
         <h1 className="text-5xl font-bold mb-8 mt-4 p-16mx-auto w-full text-center">Today's Posts</h1>
 
         <p className="mb-8 text-center">Click on the design to Download.</p>
 
-
         <div className="max-w-[600px] 2xl:max-w-[1200px] grid grid-cols-1 2xl:grid-cols-2 gap-8 mx-auto">
 
+            {
+              templates && templates.map((template:any) => {
+                return (
+                  <TemplateCard tmpltUrl={urlFor(template.image).url()}/> 
+                )
+              })
+            }
 
-
-
-
-        {
-          templates && templates.map((template:any) => {
-            return (
-              <TemplateCard tmpltUrl={urlFor(template.image).url()}/> 
-            )
-          })
-        }
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
     </div>
   )

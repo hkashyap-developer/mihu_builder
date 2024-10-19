@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 
+import { useEffect } from 'react';
 
 import {
     Dialog,
@@ -22,28 +23,29 @@ const TemplateCard = (props:any) => {
 
 
 
-  var image = localStorage.getItem('Image');
-
-    var name = localStorage.getItem('Name');
-    var designation = localStorage.getItem('Designation');
+  var image = localStorage.getItem('Image')!
 
 
+  /*
+  if(localStorage.getItem('Image')) {
+    image 
+  }
+  else {
+    image = '/user.jpg';
+  }
+*/
+
+  var name = localStorage.getItem('Name');
+  var designation = localStorage.getItem('Designation');
 
 
+  let elementRef = useRef(null);
+  let htmlToImageConvert;
 
-
-
-
-
-
-
-
-
-    let elementRef = useRef(null);
-
-
-    let htmlToImageConvert = () => {
-      toPng(elementRef.current, { cacheBust: true })
+  useEffect(() => {
+  
+    htmlToImageConvert = () => {
+      toPng(elementRef.current!, { cacheBust: true })
         .then((dataUrl) => {
           let link = document.createElement("a");
           link.download = "my-poster.png";
@@ -58,6 +60,30 @@ const TemplateCard = (props:any) => {
           console.log(err);
         });
     };
+
+    return () => {
+
+    };
+  }, []);   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -125,7 +151,7 @@ const TemplateCard = (props:any) => {
       width={1200}
       height={1200}
       alt="Picture of the author"
-      className="w-full cursor-pointer max-w-[600px] w-full"
+      className="w-full cursor-pointer max-w-[600px]"
     />
 
 
