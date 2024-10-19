@@ -10,7 +10,8 @@ const config: Config = {
   theme: {
 
 	fontFamily: {
-		myFont: ["var(--font-InknutAntiqua-SemiBold)"]
+		myFont: ["var(--font-InknutAntiqua-SemiBold)"],
+		RajdhaniSemiBold: ["var(--font-RajdhaniSemiBold)"],
 	  },
 
   	extend: {

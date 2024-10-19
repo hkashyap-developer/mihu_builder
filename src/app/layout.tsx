@@ -17,6 +17,20 @@ const InknutAntiquaSemiBold = localfont({
 });
 
 
+const RajdhaniSemiBold = localfont({
+  src: [
+    {
+    path: "../../public/fonts/Rajdhani-SemiBold.ttf",
+    weight: "700",
+    }
+  ], 
+  variable: "--font-RajdhaniSemiBold",
+});
+
+
+
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${InknutAntiquaSemiBold.variable}`}
+        className={`${InknutAntiquaSemiBold.variable} ${RajdhaniSemiBold.variable}`}
       >
 
 
@@ -35,7 +49,7 @@ export default function RootLayout({
       <Header />
 
       <div className="flex flex-column bg-slate-50">
-        <div className="mt-24 p-4 min-w-[260px]">
+        <div className="hidden 2xl:flex mt-24 p-4 min-w-[260px]">
           <div className="fixed top-20">
             <MainSidebar />
           </div>

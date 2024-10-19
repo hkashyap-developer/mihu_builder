@@ -78,6 +78,7 @@ const TemplateCard = (props:any) => {
     <div className="hover:shadow-xl relative">
 
     <Image
+        priority
         src={props.tmpltUrl}
         width={1920}
         height={1920}
@@ -98,8 +99,8 @@ const TemplateCard = (props:any) => {
           className="max-w-[200px] rounded-full  mx-auto"
         />
 
-<p className="w-full text-center text-white text-[200%] font-InknutAntiqua-SemiBold">{name}</p>
-        <p className="text-center text-white text-xl font-InknutAntiqua-SemiBold">{designation}</p>
+<p className="font-RajdhaniSemiBold w-full text-center text-white text-[200%] font-InknutAntiqua-SemiBold">{name}</p>
+        <p className="font-RajdhaniSemiBold text-center text-white text-xl font-InknutAntiqua-SemiBold">{designation}</p>
     
     
     </div>
@@ -112,13 +113,14 @@ const TemplateCard = (props:any) => {
 
 
   </DialogTrigger>
-  <DialogContent className="w-full flex align-middle max-w-[1200px] justify-between">
+  <DialogContent className="w-full flex align-middle max-w-[520px] 2xl:max-w-[1200px] justify-between">
     <DialogHeader>
       <DialogTitle>Your Post is ready!</DialogTitle>
-      <DialogDescription className="w-full flex justify-between align-middle">
+      <DialogDescription className="w-full flex flex-col 2xl:flex-row justify-between align-middle">
 
 <div ref={elementRef} className="relative flex align-middle justify-center">
       <Image
+
       src={props.tmpltUrl}
       width={1200}
       height={1200}
@@ -138,8 +140,8 @@ const TemplateCard = (props:any) => {
           className="max-w-[200px] rounded-full  mx-auto"
         />
 
-<p className="text-center text-white text-3xl font-InknutAntiqua-SemiBold">{name}</p>
-        <p className="text-center text-white text-xl font-InknutAntiqua-SemiBold">{designation}</p>
+<p className="font-RajdhaniSemiBold text-center text-white text-4xl font-InknutAntiqua-SemiBold">{name}</p>
+        <p className="font-RajdhaniSemiBold text-center text-white text-2xl font-InknutAntiqua-SemiBold">{designation}</p>
     
     
     </div>

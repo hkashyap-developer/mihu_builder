@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from "next/image" 
+import Link from 'next/link'
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 import Output from './template-01.png'
@@ -67,8 +68,8 @@ const PrimaryOutput = (props:any) => {
 
 
 
-        <p className="text-center text-white text-3xl font-InknutAntiqua-SemiBold">{name}</p>
-        <p className="text-center text-white text-xl font-InknutAntiqua-SemiBold">{designation}</p>
+        <p className="font-RajdhaniSemiBold text-center text-white text-4xl font-InknutAntiqua-SemiBold">{name}</p>
+        <p className="font-RajdhaniSemiBold text-center text-white text-2xl font-InknutAntiqua-SemiBold">{designation}</p>
     </div>
 
 
@@ -79,7 +80,7 @@ const PrimaryOutput = (props:any) => {
 
         <div className="flex flex-1 text-center justify-start gap-4">
             <Button className="text-xl font-bold p-6 bg-[#3C99FE] text-white" onClick={htmlToImageConvert}>Download</Button>
-            <Button className="text-xl font-bold p-6 bg-[#3C99FE] text-white" onClick={htmlToImageConvert}>More Designs</Button>
+            <Link href="/todays-posts"><Button className="text-xl font-bold p-6 bg-[#3C99FE] text-white">More Designs</Button></Link>
         </div>
 
 

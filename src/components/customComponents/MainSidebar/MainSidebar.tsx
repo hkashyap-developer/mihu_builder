@@ -9,12 +9,18 @@ const MainSidebar = () => {
     <div className="flex flex-col justify-between gap-4">
 
         <Link href="/">
-            <Button className="text-xl font-semibold p-6 bg-[#3C99FE]">+ Create A Post</Button>
+            <Button className="text-xl font-semibold p-6 bg-[#3C99FE]">◉ Update Profile</Button>
         </Link>
 
 
-        <Link href="/my-team" className="flex flex-row gap-2">
-            <p className="text-xl text-slate-400">My Team</p><Badge variant="outline" className="rounded-full text-xsm font-thin">Coming Soon</Badge>
+        <Link href="/todays-posts">
+            <Button className="text-xl font-semibold p-6 bg-[#3C99FE]">▣ Today's Posts</Button>
+        </Link>
+
+
+
+        <Link href="/" className="flex flex-row gap-2">
+            <p className="text-xl text-slate-400">Templates</p><Badge variant="outline" className="rounded-full text-xsm font-thin">Coming Soon</Badge>
         </Link>
 
 
@@ -25,7 +31,7 @@ const MainSidebar = () => {
 
         <Separator />
 
-        <Link href="/my-team">
+        <Link href="/settings">
             <p className="text-xl">Settings</p>
         </Link>
 

@@ -4,6 +4,7 @@ import React from 'react'
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import Image from "next/image";
 import {useForm} from 'react-hook-form'
 import { useEffect } from 'react';
@@ -196,7 +197,7 @@ const AllInputs = (props:any) => {
     </form>
 
     </div>
-    👆 How It works?
+    <Link href="/how-to-use">👆 How It works?</Link>
 
 
     </div>

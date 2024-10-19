@@ -1,6 +1,6 @@
 
 /*
-
+      <HeroBanner />
     <HeadSubHdContAndImg/>
 
 */
@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="">
 
-          <HeroBanner />
+
           <MainCanvas />
 
     </div>

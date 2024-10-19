@@ -23,12 +23,14 @@ const HeroBanner = () => {
 
     </div>
     </div>
+    {/*
     <div className="flex flex-row gap-4">
     <Button variant="outline" className="max-w-min text-xl">Diwali</Button>
     <Button variant="outline" className="max-w-min text-xl">Dussehra</Button>
     <Button variant="outline" className="max-w-min text-xl">Shree Ram</Button>
     <Button variant="outline" className="max-w-min text-xl">Deepak</Button>
     </div>
+      */}
     </div>
   )
 }
