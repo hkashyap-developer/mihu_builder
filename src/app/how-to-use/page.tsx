@@ -2,9 +2,6 @@ import HeroBanner from '@/components/customComponents/HeroBanner/HeroBanner2'
 import HorzNavBar from '@/components/customComponents/HorzNavBar/HorzNavBar'
 import React from 'react'
 import Image from 'next/image'
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Button } from '@/components/ui/button'
 
 const page = () => {
   return (

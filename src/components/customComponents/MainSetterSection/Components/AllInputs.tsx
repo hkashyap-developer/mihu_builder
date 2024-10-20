@@ -24,17 +24,6 @@ const AllInputs = (props:any) => {
 
 
 
-  var image = localStorage.getItem('Image')!;
-  var name = localStorage.getItem('Name')!;
-  var designation = localStorage.getItem('Designation')!;
-
-
-
-
-
-
-
-
 
 
 
@@ -46,12 +35,20 @@ const AllInputs = (props:any) => {
 
 
 
+    var image = localStorage.getItem('Image')!;
+    var name = localStorage.getItem('Name')!;
+    var designation = localStorage.getItem('Designation')!;
+  
+  
 
-    const fileEl = document.getElementById('userPic')!;
 
 
-    console.log(fileEl); 
 
+
+    const fileEl = document.getElementById('userPic');
+
+
+  
     fileEl.addEventListener('change', ()=> {
   
       const fr = new FileReader();
@@ -64,7 +61,6 @@ const AllInputs = (props:any) => {
       })
   
     }); 
-
 
 
 
@@ -138,7 +134,7 @@ const AllInputs = (props:any) => {
       <Label htmlFor="picture" className="flex flex-col gap-4 font-bold cursor-pointer max-w-min rounded-full mx-auto">
 
       <Image
-      src={image}
+      src={props.userImageVar}
       width={200}
       height={200}
       alt="Picture of the author"
@@ -166,7 +162,7 @@ const AllInputs = (props:any) => {
       <Input 
       type="text" 
       id="name" 
-      placeholder={name}
+      placeholder={props.setNameVar}
       {...register("name")}
       className="text-xl py-6 w-full border-b-8"
       />
@@ -182,7 +178,7 @@ const AllInputs = (props:any) => {
       <Input 
       type="text" 
       id="designation" 
-      placeholder={designation}
+      placeholder={props.designationVar}
       {...register("desig")}
       className="text-xl py-6 w-full border-b-8"
       />
